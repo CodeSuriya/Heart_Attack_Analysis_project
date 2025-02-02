@@ -1,3 +1,6 @@
+# Heart Attack Analysis Project  
+This project analyzes global heart attack data, focusing on risk factors like alcohol consumption, diabetes, and medication status.  
+
 GLOBAL DATASET :
 It contain the more than 5 million rows.
 The python notebook give the clear view of the data cleaning .
