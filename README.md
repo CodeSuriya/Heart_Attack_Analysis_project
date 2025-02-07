@@ -15,3 +15,14 @@ In global dataset have asia , africa, north america , south america , europe . w
 After separate the north america region from the global dataset , we need to check all the elements are correctly updated , in case any missing value or NAN values we need to handle it and fill that value.
 Then we need to change the region category north america into united state, canada , mexico..... according to the medical research there are large number of heart attack rate is come from north america (united state . so we need to categorize the region value into 75% of region should be united state , 13% of region should be canada , finally 12% of region should be mexico for the analysis.
 Next saved the updated dataset into north america dataset for the final work.
+
+
+CHINA DATASET:
+This repository documents the data cleaning process for the China dataset, which is part of the Heart Attack Analysis Project.
+The focus is on preparing the data for further analysis and visualization.
+Imported the dataset using pandas and checked the structure.
+The 'Blood Pressure' column was in float format.
+Converted it into integer values for consistency.
+The 'Alcohol Consumption' column had NaN values.
+Filled missing values proportionally based on the existing distribution of 'moderate' and 'high' values.
+After theat process , saved the updated dataset into cleaned china dataset for the final work
