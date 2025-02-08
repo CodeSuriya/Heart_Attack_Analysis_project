@@ -25,4 +25,35 @@ The 'Blood Pressure' column was in float format.
 Converted it into integer values for consistency.
 The 'Alcohol Consumption' column had NaN values.
 Filled missing values proportionally based on the existing distribution of 'moderate' and 'high' values.
-After theat process , saved the updated dataset into cleaned china dataset for the final work
+After that process , saved the updated dataset into cleaned china dataset for the final work
+
+
+FRANCE DATASET:
+In the France dataset, I performed a comprehensive data cleaning process to ensure accuracy and consistency for heart attack analysis. Below is a detailed breakdown of the steps I took:
+
+1. Handling Missing Values
+Identified and filled missing values in key columns like Alcohol Consumption using proportional imputation based on existing distributions.
+Ensured no NaN values remained after processing.
+
+2. Data Type Standardization
+Converted categorical values stored as numbers (e.g., Alcohol Consumption) into meaningful labels (Moderate, Heavy).
+  
+3. Feature Engineering & Categorization
+Alcohol Consumption: Defined thresholds (0-14 as Moderate, 15+ as Heavy).
+Stress Levels: Binned numerical values into Good, Moderate, and Bad categories.
+Air Pollution Levels: Removed the "Bad" category since it contained zero values, keeping only Good and Moderate levels.
+
+4. Column Standardization & Renaming
+Renamed columns for clarity (e.g., "Deit_Type" → "Diet_Quality").
+Merged Blood Pressure Systolic & Diastolic into a single Blood Pressure column to match the format of the global and China datasets.
+Standardized Region Category values from North, South, West, East, Central to:
+France (North)
+France (South)
+France (West)
+France (East)
+France (Central)
+
+5. Ensuring Data Integrity
+Verified all changes using value_counts() and info().
+Ensured no unintended NaN values were introduced during transformations.
+After that process , saved the updated dataset into cleaned france dataset for the final work
