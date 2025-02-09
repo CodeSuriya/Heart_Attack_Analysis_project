@@ -57,3 +57,44 @@ France (Central)
 Verified all changes using value_counts() and info().
 Ensured no unintended NaN values were introduced during transformations.
 After that process , saved the updated dataset into cleaned france dataset for the final work
+
+
+RUSSIA DATASET:
+
+Renaming Columns for Better Readability:
+Renamed the "Region" column to "Region_Category" to clarify its purpose.
+
+Standardizing Region Names:
+Updated values in the "Region_Category" column to provide better context:
+"Rural" → "Russia (Rural)"
+"Urban" → "Russia (Urban)"
+"Suburban" → "Russia (Suburban)"
+
+Handling Missing Values:
+Checked for missing values across all columns.
+Decided on appropriate methods to fill or drop missing values based on the column type and impact on analysis.
+
+Converting Categorical Variables to Meaningful Labels:
+Converted the "Physical Activity" column from numerical values to categorical labels:
+Low → "Bad"
+Moderate → "Moderate"
+High → "Good"
+Converted the "Alcohol Consumption" column:
+"Often" → "Moderate"
+"Rarely" → "Good"
+Converted the "Health Awareness" column (which had numeric values) into meaningful categories.
+
+Dropping Unnecessary Columns:
+Removed "Air Pollution Level" as it was not needed for further analysis.
+
+Ensuring Data Type Consistency:
+Converted categorical columns (e.g., "Stress Level," "Mental Health," "Physical Activity") to object dtype.
+Converted "Daily Water Intake" values into categorical bins for better interpretation.
+
+Final Data Quality Check:
+Verified that all transformations were successfully applied.
+Ensured there were no remaining NaN values in critical columns.
+
+Outcome:
+The Russia dataset is now cleaned, standardized, and ready for analysis.
+The cleaned dataset ensures accurate insights for visualizations and comparisons in the final dashboard.
