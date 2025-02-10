@@ -98,3 +98,39 @@ Ensured there were no remaining NaN values in critical columns.
 Outcome:
 The Russia dataset is now cleaned, standardized, and ready for analysis.
 The cleaned dataset ensures accurate insights for visualizations and comparisons in the final dashboard.
+
+
+
+INDIA DATASET:
+
+Handled Missing Values:
+Issue: Missing values in the Physical Activity column.
+Solution: Imputed missing values using proportional distribution based on existing categories (Good, Moderate, Bad).
+Method Used: fillna() with weighted random sampling to maintain dataset balance.
+
+Standardized Column Names:
+Issue: Inconsistent column names (spaces, uppercase/lowercase mix).
+Solution: Renamed columns using df.columns = df.columns.str.replace(" ", "_").str.lower().
+Outcome: Improved readability and consistency.
+
+Categorized Numerical Variables:
+Triglyceride Levels: Converted numerical values into Good, Moderate, and Bad categories using defined thresholds.
+Blood Oxygen Levels (SpO2%): Classified into Good (>95%), Moderate (90-95%), and Bad (<90%).
+
+Checked for Duplicates:
+Issue: Potential duplicate records in the dataset.
+Solution: Used df.duplicated().sum() to check for duplicates and removed them using df.drop_duplicates(inplace=True).
+
+Fixed Data Type Issues:
+Issue: Columns stored as incorrect data types (e.g., Int64 instead of int64).
+Solution: Converted using astype(int).
+
+Detected and Handled Outliers:
+Issue: Extreme values in columns like Cholesterol, Blood Pressure, and Heart Rate.
+Solution: Used Boxplot to visualize outliers and handled them using IQR method (removed or capped extreme values).
+
+Ensured Logical Consistency:
+Issue: Some unrealistic values (e.g., extremely low or high heart rates).
+Solution: Applied domain-specific rules to filter out incorrect values.
+
+
