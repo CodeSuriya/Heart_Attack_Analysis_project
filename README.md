@@ -129,8 +129,51 @@ Detected and Handled Outliers:
 Issue: Extreme values in columns like Cholesterol, Blood Pressure, and Heart Rate.
 Solution: Used Boxplot to visualize outliers and handled them using IQR method (removed or capped extreme values).
 
+
 Ensured Logical Consistency:
 Issue: Some unrealistic values (e.g., extremely low or high heart rates).
 Solution: Applied domain-specific rules to filter out incorrect values.
+
+
+INDONESIA DATASET
+
+During the data cleaning process for the Indonesia dataset, the following steps were performed to ensure data accuracy, consistency, and completeness:
+
+Handling Missing Values
+Checked for missing values using .isnull().sum().
+Visualized missing data patterns using msno.matrix().
+Used appropriate strategies such as:
+Mean/Median Imputation for numerical columns.
+Mode Imputation for categorical columns.
+Dropping highly null columns if necessary.
+
+Data Type Corrections
+Ensured numerical columns were in the correct format (int64 or float64).
+Converted categorical columns (e.g., Gender, Diet_Quality, Physical_Activity) to object type if needed.
+
+Handling Duplicates
+Checked for duplicate rows using .duplicated().sum().
+Removed any duplicate records to maintain data integrity.
+
+Standardizing Categorical Values
+Ensured categorical values had a consistent format (e.g., Male vs. M, Female vs. F).
+Used .str.lower().str.strip() to standardize text-based categories.
+
+Outlier Detection & Treatment
+Used boxplots and histograms to identify potential outliers in key variables (BMI, Blood_Pressure, etc.).
+Treated outliers using:
+Winsorization (Capping extreme values).
+Transformation techniques (Log, Square Root) if required.
+
+Normalization & Scaling (if needed)
+Applied Min-Max Scaling or Standardization for numerical variables if analysis required it.
+
+Final Validation & Export
+Rechecked dataset using .info() and .describe() to ensure correctness.
+Exported the cleaned dataset as cleaned_Indonesia_dataset.csv for further analysis.
+
+Outcome:
+🔹 The dataset is now clean, structured, and ready for EDA & visualization. 
+🔹 Ensured data integrity, consistency, and accuracy for meaningful insights.
 
 
