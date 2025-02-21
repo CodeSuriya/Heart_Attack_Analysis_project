@@ -210,3 +210,45 @@ Cost-Effective Solution: Instead of running queries on local machines (which may
 Conclusion:
 
 By splitting the North America dataset, I ensured efficient data handling, improved analysis, and better visualization. Additionally, uploading large datasets to BigQuery optimized query performance, eliminated storage issues, and enabled seamless integration with other analytical tools. This approach significantly enhanced the efficiency and accuracy of my heart attack analysis project.
+
+
+
+# Global Dataset Split - BigQuery Processing
+
+## 📌 Why Split the Global Dataset?
+The original **Global Dataset** was **716MB**, exceeding the **100MB** upload limit in BigQuery.  
+To efficiently upload and analyze the data, I split the dataset into **smaller parts** (≤100MB each).  
+
+This ensures:
+- **Efficient Uploading**: Each split file fits within BigQuery’s upload limit.
+- **Faster Processing**: Handling smaller files improves query performance.
+- **Structured Data Handling**: Allows parallel processing of different dataset parts.
+
+---
+
+## How Many Datasets Were Created?
+The **Global Dataset** was split into **8 separate files**:  
+- `global_dataset_part_1.csv` (≈89MB)  
+- `global_dataset_part_2.csv` (≈89MB)  
+- `global_dataset_part_3.csv` (≈89MB)  
+- `global_dataset_part_4.csv` (≈89MB)  
+- `global_dataset_part_5.csv` (≈89MB)  
+- `global_dataset_part_6.csv` (≈89MB)  
+- `global_dataset_part_7.csv` (≈89MB)  
+- `global_dataset_part_8.csv` (≈89MB)  
+
+Each file contains a proportional number of rows to maintain data integrity.
+
+---
+
+## Next Steps
+### ** Upload to Google BigQuery**
+- Upload each split dataset to **BigQuery**.
+- Store them in a designated **dataset table**.
+
+### ** Merge Data in BigQuery (if needed)**
+After uploading, the datasets can be **combined** using SQL:
+```sql
+SELECT * FROM `your_project.your_dataset.global_dataset_part_*`
+
+
