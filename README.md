@@ -177,3 +177,36 @@ Outcome:
 🔹 Ensured data integrity, consistency, and accuracy for meaningful insights.
 
 
+**North America Dataset Splitting & BigQuery Usage**
+
+*Reason for Splitting the North America Dataset*
+
+The North America dataset was split due to the following reasons:
+
+Data Volume & Complexity: The dataset contained a massive amount of records, making it difficult to process efficiently in a single file. Splitting it into smaller subsets improved manageability.
+
+Region-Specific Analysis: North America consists of multiple countries with distinct healthcare systems, demographics, and risk factors. Splitting the dataset allowed for granular analysis per country (e.g., USA, Canada, Mexico).
+
+Faster Data Processing: Handling smaller datasets reduced the computational load on Pandas, NumPy, and SQL queries, leading to faster execution times.
+
+Better Data Visualization: Separate datasets allowed the creation of focused Power BI dashboards with country-specific insights rather than an overloaded visualization.
+
+Error Handling & Debugging: Smaller datasets made it easier to identify and fix missing values, inconsistencies, and outliers before merging them for a comparative analysis.
+
+**Why Upload to BigQuery for Large Datasets?**
+
+BigQuery was chosen for handling the large dataset due to:
+
+Scalability & Performance: BigQuery is optimized for handling terabytes of data, providing fast query execution compared to traditional databases.
+
+Cloud Storage Efficiency: Instead of managing large local CSV/Excel files, BigQuery allows cloud-based storage, making it accessible anytime, anywhere.
+
+SQL-Based Data Analysis: Using Google’s BigQuery SQL engine, complex queries can be executed efficiently without performance bottlenecks.
+
+Integration with Other Tools: BigQuery seamlessly integrates with Power BI, Python, and AI/ML tools, enabling advanced analytics and visualization.
+
+Cost-Effective Solution: Instead of running queries on local machines (which may require high-end hardware), BigQuery’s pay-per-query model is more efficient for large datasets.
+
+Conclusion:
+
+By splitting the North America dataset, I ensured efficient data handling, improved analysis, and better visualization. Additionally, uploading large datasets to BigQuery optimized query performance, eliminated storage issues, and enabled seamless integration with other analytical tools. This approach significantly enhanced the efficiency and accuracy of my heart attack analysis project.
