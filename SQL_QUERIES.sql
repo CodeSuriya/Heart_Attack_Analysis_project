@@ -76,3 +76,55 @@ SELECT sleep_hours, stress_level, COUNT(*) AS count FROM cleaned_indonesia_datas
 SELECT healthcare_access, COUNT(*) AS count FROM cleaned_indonesia_dataset GROUP BY healthcare_access;
 
 
+SELECT * FROM cleaned_russia_dataset
+select count(*) as total_records from  cleaned_russia_dataset
+
+show columns from cleaned_russia_dataset
+
+
+SELECT Region_Category, COUNT(*) AS count FROM cleaned_russia_dataset GROUP BY Region_Category ORDER BY count DESC;
+
+SELECT Gender, AVG(Blood_Pressure) AS avg_blood_pressure FROM cleaned_russia_dataset GROUP BY Gender;
+
+SELECT COUNT(*) AS high_cholesterol_cases FROM cleaned_russia_dataset WHERE Cholesterol_Level >= 240;
+
+SELECT Physical_Activity, AVG(BMI) AS avg_BMI FROM cleaned_russia_dataset GROUP BY Physical_Activity ORDER BY avg_BMI DESC;
+
+SELECT COUNT(*) AS heart_attack_cases FROM cleaned_russia_dataset WHERE Heart_Attack = 'Yes';
+SELECT Smoking_Status, COUNT(*) AS heart_attack_count 
+FROM cleaned_russia_dataset 
+WHERE Heart_Attack = 'Yes' 
+GROUP BY Smoking_Status 
+ORDER BY heart_attack_count DESC;
+
+SELECT COUNT(*) * 100.0 / (SELECT COUNT(*) FROM cleaned_russia_dataset) AS diabetes_percentage 
+FROM cleaned_russia_dataset 
+WHERE Diabetes = 'Yes';
+
+SELECT Alcohol_Consumption, COUNT(*) AS count FROM cleaned_russia_dataset GROUP BY Alcohol_Consumption ORDER BY count DESC;
+SELECT Stress_Level, COUNT(*) AS heart_attack_cases 
+FROM cleaned_russia_dataset 
+WHERE Heart_Attack = 'Yes' 
+GROUP BY Stress_Level 
+ORDER BY heart_attack_cases DESC;
+
+SELECT Stress_Level, AVG(Sleep_Hours) AS avg_sleep FROM cleaned_russia_dataset GROUP BY Stress_Level ORDER BY avg_sleep;
+
+SELECT Occupation, COUNT(*) AS count FROM cleaned_russia_dataset GROUP BY Occupation ORDER BY count DESC;
+SELECT Income_Level, COUNT(*) AS health_awareness_count 
+FROM cleaned_russia_dataset 
+WHERE Health_Awareness = 'High Awareness' 
+GROUP BY Income_Level 
+ORDER BY health_awareness_count DESC;
+
+SELECT Daily_Water_Intake, COUNT(*) AS obese_count 
+FROM cleaned_russia_dataset 
+WHERE Obesity = 'Yes' 
+GROUP BY Daily_Water_Intake 
+ORDER BY obese_count DESC;
+
+SELECT Education_Level, COUNT(*) AS medication_users 
+FROM cleaned_russia_dataset 
+WHERE Medication = 'Yes' 
+GROUP BY Education_Level 
+ORDER BY medication_users DESC;
