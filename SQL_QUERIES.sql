@@ -174,3 +174,32 @@ GROUP BY Diet_Quality
 ORDER BY avg_cholesterol DESC;
 
 SELECT Regular_Checkups, COUNT(*) AS count FROM cleaned_france_dataset GROUP BY Regular_Checkups ORDER BY count DESC;
+
+select * from cleaned_china_dataset
+select count(*) as total_records from cleaned_china_dataset
+
+show columns from cleaned_china_dataset
+
+SELECT COUNT(*) AS total_records FROM cleaned_china_dataset;
+SELECT Gender, AVG(Age) AS avg_age FROM cleaned_china_dataset GROUP BY Gender;
+SELECT COUNT(*) AS heart_attack_cases FROM cleaned_china_dataset WHERE Heart_Attack = 'Yes';
+SELECT COUNT(*) * 100.0 / (SELECT COUNT(*) FROM cleaned_china_dataset) AS hypertension_percentage
+FROM cleaned_china_dataset
+WHERE Hypertension_Status = 'Yes';
+SELECT Smoking_Status, COUNT(*) AS count FROM cleaned_china_dataset GROUP BY Smoking_Status;
+SELECT Employment_Status, Physical_Activity, COUNT(*) AS count
+FROM cleaned_china_dataset
+GROUP BY Employment_Status, Physical_Activity
+ORDER BY Employment_Status;
+SELECT Diet_Quality, AVG(BMI) AS avg_bmi FROM cleaned_china_dataset GROUP BY Diet_Quality;
+SELECT COUNT(*) AS alcohol_consumers 
+FROM cleaned_china_dataset 
+WHERE Alcohol_Consumption = 'Heavy';
+SELECT Stress_Level, Sleep_Hours, COUNT(*) AS count
+FROM cleaned_china_dataset
+GROUP BY Stress_Level, Sleep_Hours
+ORDER BY Stress_Level;
+
+SELECT COUNT(*) * 100.0 / (SELECT COUNT(*) FROM cleaned_china_dataset) AS family_history_percentage
+FROM cleaned_china_dataset
+WHERE Family_History = 'Yes';
