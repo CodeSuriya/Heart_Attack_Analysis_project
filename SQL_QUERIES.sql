@@ -32,6 +32,47 @@ SELECT location_type, COUNT(*) AS count FROM cleaned_india_dataset GROUP BY loca
 SELECT COUNT(*) * 100.0 / (SELECT COUNT(*) FROM cleaned_india_dataset) AS mortality_rate FROM cleaned_india_dataset WHERE heart_attack = 'Yes' AND oxygen_level < 90;
 
 
+Select * from cleaned_indonesia_dataset
 
+SELECT COUNT(*) AS total_records FROM cleaned_indonesia_dataset;
+
+SELECT region_category, COUNT(*) AS count FROM cleaned_indonesia_dataset GROUP BY region_category ORDER BY count DESC;
+
+SELECT gender, AVG(age) AS avg_age FROM cleaned_indonesia_dataset GROUP BY gender;
+
+SELECT COUNT(*) AS heart_attack_cases FROM cleaned_indonesia_dataset WHERE heart_attack = 'Yes';
+
+SELECT COUNT(*) AS high_cholesterol_cases FROM cleaned_indonesia_dataset WHERE cholesterol_level = 'High';
+
+SELECT COUNT(*) AS high_cholesterol_cases 
+FROM cleaned_indonesia_dataset 
+WHERE cholesterol_level >= 240;
+
+SELECT smoking_status, COUNT(*) AS count FROM cleaned_indonesia_dataset GROUP BY smoking_status;
+
+SELECT COUNT(*) AS physically_active FROM cleaned_indonesia_dataset WHERE physical_activity = 'High';
+
+SELECT COUNT(*) * 100.0 / (SELECT COUNT(*) FROM cleaned_indonesia_dataset) AS obesity_percentage FROM cleaned_indonesia_dataset WHERE BMI > 30;
+
+SELECT COUNT(*) AS hypertension_cases FROM cleaned_indonesia_dataset WHERE hypertension = 'Yes';
+
+SELECT alcohol_consumption, COUNT(*) AS count 
+FROM cleaned_indonesia_dataset 
+GROUP BY alcohol_consumption 
+ORDER BY count DESC;
+
+SELECT COUNT(*) * 100.0 / (SELECT COUNT(*) FROM cleaned_indonesia_dataset) AS unhealthy_diet_percentage 
+FROM cleaned_indonesia_dataset 
+WHERE diet_quality = 'unhealthy';
+
+SELECT employment_status, COUNT(*) AS count 
+FROM cleaned_indonesia_dataset 
+GROUP BY employment_status;
+
+SELECT occupation_type, stress_level, COUNT(*) AS count FROM cleaned_indonesia_dataset GROUP BY occupation_type, stress_level ORDER BY occupation_type;
+
+SELECT sleep_hours, stress_level, COUNT(*) AS count FROM cleaned_indonesia_dataset GROUP BY sleep_hours, stress_level ORDER BY sleep_hours;
+
+SELECT healthcare_access, COUNT(*) AS count FROM cleaned_indonesia_dataset GROUP BY healthcare_access;
 
 
