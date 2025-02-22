@@ -27,7 +27,6 @@ The 'Alcohol Consumption' column had NaN values.
 Filled missing values proportionally based on the existing distribution of 'moderate' and 'high' values.
 After that process , saved the updated dataset into cleaned china dataset for the final work
 
-
 FRANCE DATASET:
 In the France dataset, I performed a comprehensive data cleaning process to ensure accuracy and consistency for heart attack analysis. Below is a detailed breakdown of the steps I took:
 
@@ -250,5 +249,54 @@ Each file contains a proportional number of rows to maintain data integrity.
 After uploading, the datasets can be **combined** using SQL:
 ```sql
 SELECT * FROM `your_project.your_dataset.global_dataset_part_*`
+
+
+
+-------------------------------------------------------------------------
+
+**Big Query :**
+1) North america :
+Summary of North America Dataset – BigQuery Results
+The North America dataset analysis in BigQuery provides key insights into heart attack cases based on various demographic, lifestyle, and medical factors. Below is a summary of findings based on the queries executed:
+
+1. Age Group & Heart Attack Cases
+Adults (599,520 cases) have a higher occurrence of heart attacks compared to Youth (400,894 cases).
+2. Gender Distribution
+Males (480,527 cases) and Females (480,154 cases) have nearly equal heart attack cases.
+A small number of cases belong to Other gender category (39,733 cases).
+3. Regional Distribution
+United States: 750,310 cases (Highest)
+Canada: 130,053 cases
+Mexico: 120,051 cases
+4. Smoking Status & Heart Attack Risk
+Non-smokers (599,642 cases) had the highest heart attack cases.
+Former smokers (250,826 cases) had significant cases.
+Current smokers (149,946 cases) had the lowest reported cases.
+5. Cholesterol Levels & Case Count
+Cholesterol levels ranging from 295 to 299 mg/dL had a high number of heart attack cases.
+Highest cases were observed at 299 mg/dL (5,548 cases).
+6. BMI & Heart Attack Risk
+BMI values between 18.6, 21.3, and 24.5 showed almost equal case counts (4,700–4,722 cases).
+7. Physical Activity & Heart Attack Cases
+Good activity level (497,170 cases) had the highest count.
+Moderate activity level (333,652 cases) had a lower count.
+Poor physical activity (169,592 cases) had the least number of cases.
+8. Mortality Rate by Age Group
+Youth: 400,894 total cases → 40,431 deaths → 10.09% mortality rate
+Adults: 599,520 total cases → 59,906 deaths → 9.99% mortality rate
+Insight: Youth had a slightly higher mortality rate despite fewer total cases.
+9. Stress Levels & Heart Attack Cases
+Moderate stress (50,260 cases) → Highest cases
+Low stress (29,944 cases)
+High stress (20,133 cases) → Lowest cases
+10. Medication Status
+Not on medication (849,840 cases) had significantly more heart attack cases.
+On medication (150,574 cases) had fewer cases.
+Key Takeaways
+✅ Adults are more affected than youth.
+✅ Males and females show nearly equal heart attack cases.
+✅ United States has the highest reported cases.
+✅ Non-smokers and those not on medication had the highest heart attack cases, indicating other risk factors.
+✅ Moderate stress and poor physical activity contribute to increased heart attack cases.
 
 
