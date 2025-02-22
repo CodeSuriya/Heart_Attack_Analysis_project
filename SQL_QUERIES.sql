@@ -128,3 +128,49 @@ FROM cleaned_russia_dataset
 WHERE Medication = 'Yes' 
 GROUP BY Education_Level 
 ORDER BY medication_users DESC;
+
+select * from cleaned_france_dataset
+select count(*) from cleaned_france_dataset
+show columns from cleaned_france_dataset
+
+SELECT Region_Category, COUNT(*) AS count FROM cleaned_france_dataset GROUP BY Region_Category ORDER BY count DESC;
+
+SELECT Age_Group, AVG(BMI) AS avg_BMI FROM cleaned_france_dataset GROUP BY Age_Group ORDER BY avg_BMI DESC;
+SELECT COUNT(*) AS high_cholesterol_cases FROM cleaned_france_dataset WHERE Cholesterol_Level >= 240;
+
+SELECT Smoking_Status, COUNT(*) AS heart_attack_cases
+FROM cleaned_france_dataset
+WHERE Heart_Attack = 'Yes'
+GROUP BY Smoking_Status
+ORDER BY heart_attack_cases DESC;
+
+SELECT COUNT(*) * 100.0 / (SELECT COUNT(*) FROM cleaned_france_dataset) AS diabetes_percentage
+FROM cleaned_france_dataset
+WHERE Diabetes = 'Yes';
+
+SELECT Alcohol_Consumption, COUNT(*) AS count FROM cleaned_france_dataset GROUP BY Alcohol_Consumption ORDER BY count DESC;
+SELECT Stress_Level, COUNT(*) AS heart_attack_cases
+FROM cleaned_france_dataset
+WHERE Heart_Attack = 'Yes'
+GROUP BY Stress_Level
+ORDER BY heart_attack_cases DESC;
+
+SELECT Physical_Activity, AVG(BMI) AS avg_BMI FROM cleaned_france_dataset GROUP BY Physical_Activity ORDER BY avg_BMI DESC;
+SELECT Age_Group, AVG(Blood_Pressure) AS avg_bp FROM cleaned_france_dataset GROUP BY Age_Group ORDER BY avg_bp DESC;
+
+SELECT Education_Level, COUNT(*) AS count FROM cleaned_france_dataset GROUP BY Education_Level ORDER BY count DESC;
+SELECT Income_Level, COUNT(*) AS insured_count
+FROM cleaned_france_dataset
+WHERE Health_Insurance = 'Yes'
+GROUP BY Income_Level
+ORDER BY insured_count DESC;
+SELECT COUNT(*) * 100.0 / (SELECT COUNT(*) FROM cleaned_france_dataset) AS adherence_percentage
+FROM cleaned_france_dataset
+WHERE Medication_Adherence = 'Yes';
+
+SELECT Diet_Quality, AVG(Cholesterol_Level) AS avg_cholesterol
+FROM cleaned_france_dataset
+GROUP BY Diet_Quality
+ORDER BY avg_cholesterol DESC;
+
+SELECT Regular_Checkups, COUNT(*) AS count FROM cleaned_france_dataset GROUP BY Regular_Checkups ORDER BY count DESC;
