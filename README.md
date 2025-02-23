@@ -300,3 +300,76 @@ Key Takeaways
 ✅ Moderate stress and poor physical activity contribute to increased heart attack cases.
 
 
+**Global Dataset (BigQuery) - Summary & Key Takeaways**
+
+Summary:
+The Global dataset provides insights into heart disease trends worldwide, covering various risk factors such as age, cholesterol levels, blood pressure, smoking, obesity, and physical activity.
+It includes data from multiple countries, allowing comparisons between regions.
+The dataset is large, so BigQuery is used for faster processing.
+
+Key Takeaways:
+
+✔ Global Heart Disease Trends
+The prevalence of heart disease is higher in older age groups (above 50 years).
+Men have a slightly higher risk than women across most countries.
+
+✔ Lifestyle & Risk Factors
+Smoking & Obesity are strongly correlated with heart disease.
+High cholesterol and high blood pressure are the top medical risk factors.
+Countries with higher physical activity levels report lower heart disease rates.
+
+✔ Geographical Insights
+Western countries (USA, UK, France, Germany) have a higher prevalence of heart disease.
+Asian countries (India, China, Japan) show lower but rising heart disease cases due to urbanization and diet changes.
+Developed nations have better access to healthcare but also higher obesity rates, leading to more cases.
+
+✔ Healthcare Impact
+Countries with advanced healthcare systems show lower mortality rates despite high heart disease cases.
+Preventive measures (like diet and exercise) significantly impact reducing risks.
+
+**Country-Specific Datasets (SQL Workbench) - Summary & Key Takeaways**
+China Dataset
+Summary:
+Focuses on heart disease cases and risk factors in China.
+Includes data on lifestyle habits, cholesterol levels, and medical history.
+
+Key Takeaways:
+✔ Lower smoking rates compared to Western countries, but increasing among younger populations.
+✔ Traditional diet (high in vegetables, low in processed foods) reduces risk, but urbanization is increasing fast food consumption.
+✔ Hypertension is a growing concern, especially in urban areas.
+
+India Dataset
+Summary:
+Examines heart disease risk factors among different age groups and demographics in India.
+
+Key Takeaways:
+✔ High prevalence of diabetes and high blood pressure, increasing heart disease risk.
+✔ Sedentary lifestyle in urban areas is leading to a rise in cases.
+✔ Vegetarian diet may help reduce cholesterol levels, but high-carb intake is a concern.
+
+Indonesia Dataset
+Summary:
+Covers heart disease trends and lifestyle habits in Indonesia.
+
+Key Takeaways:
+✔ Smoking rates are among the highest in Asia, significantly increasing heart disease risk.
+✔ Obesity is on the rise, particularly in cities.
+✔ Limited healthcare access in rural areas leads to underreporting of cases.
+
+Russia Dataset
+Summary:
+Analyzes heart disease cases in Russia based on lifestyle, diet, and medical conditions.
+
+Key Takeaways:
+✔ Highest alcohol consumption rate, leading to heart disease complications.
+✔ Harsh climate contributes to a sedentary lifestyle.
+✔ Higher cholesterol and obesity rates compared to Asian countries.
+
+France Dataset
+Summary:
+Studies heart disease trends in France, known for its Mediterranean diet.
+
+Key Takeaways:
+✔ Lower heart disease rates despite high-fat diets, due to Mediterranean eating habits (olive oil, wine, fresh vegetables).
+✔ Active lifestyle and healthcare awareness contribute to lower cases.
+✔ Smoking remains a concern, particularly among young adults.
